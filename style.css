@@ -1,83 +1,103 @@
-/* Reset */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Base */
 body {
-    font-family: "Inter", sans-serif;
-    color: #eee;
-    background: #0a0a0a;
-    line-height: 1.6;
-}
-
-.container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding: 2rem;
+    font-family: 'Inter', sans-serif;
+    background: #0a0a0f;
+    color: #f5f5f5;
+    line-height: 1.7;
 }
 
 section {
-    padding: 4rem 0;
+    padding: 100px 10%;
 }
 
-/* Hero */
+h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    letter-spacing: -2px;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    font-weight: 600;
+}
+
+p {
+    max-width: 700px;
+    font-size: 1.1rem;
+    color: #bbb;
+}
+
+/* HERO */
+
 .hero {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    margin: 20px 0 40px;
 }
 
 .btn {
     display: inline-block;
-    padding: 0.8rem 1.6rem;
-    background: #006cff;
+    padding: 12px 28px;
+    background: linear-gradient(90deg, #0066ff, #00ccff);
+    border-radius: 6px;
     color: white;
     text-decoration: none;
-    border-radius: 4px;
+    font-weight: 600;
+    transition: 0.3s ease;
 }
 
-/* Sections */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: #006cff;
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(0, 119, 255, 0.4);
 }
 
-.skills .grid {
+/* PROJECTS */
+
+.project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-}
-
-.projects .project-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
 }
 
 .project {
-    background: #111;
-    padding: 1.6rem;
-    border-radius: 6px;
+    background: #111118;
+    padding: 30px;
+    border-radius: 12px;
+    transition: 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.05);
 }
 
-/* Contact */
-.contact a {
-    color: #006cff;
-    text-decoration: none;
+.project:hover {
+    transform: translateY(-8px);
+    border: 1px solid rgba(0,119,255,0.5);
+}
+
+.project h3 {
+    margin-bottom: 15px;
+}
+
+/* FADE ANIMATION */
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s ease;
+}
+
+.fade-in.show {
+    opacity: 1;
+    transform: translateY(0);
 }
